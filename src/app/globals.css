@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-fraunces), Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    --huertana-cream: #F5F0E6;
+    --huertana-black: #1B1B1B;
+    --huertana-gold: #C99A4A;
+    --huertana-leaf: #617248;
+    --huertana-white: #FFFCF7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--huertana-cream);
+    color: var(--huertana-black);
+  }
+
+  body {
+    background-color: var(--huertana-cream);
+    color: var(--huertana-black);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
