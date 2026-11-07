@@ -27,14 +27,10 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Columna Izquierda: Mensaje y Headline dinámico */}
           <div className="flex flex-col items-start lg:col-span-7">
-            <span className="rounded-full border border-[#C99A4A]/40 bg-[#FFFCF7] px-3.5 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#617248]">
-              [ Russell · Maipú · Mendoza ]
-            </span>
-
             {/* Headline Dinámico referenciado a momentos entre amigos y familia */}
             <h1
               id="hero-heading"
-              className="mt-6 font-serif text-4xl leading-[1.14] font-normal tracking-tight text-[#1B1B1B] sm:text-5xl lg:text-[3.85rem]"
+              className="font-serif text-4xl leading-[1.14] font-normal tracking-tight text-[#1B1B1B] sm:text-5xl lg:text-[3.85rem]"
             >
               <span>Si hay </span>
               <span className="inline-block relative min-w-[260px] sm:min-w-[420px]">
