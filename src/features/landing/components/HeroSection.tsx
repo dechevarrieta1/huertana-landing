@@ -31,13 +31,13 @@ export function HeroSection() {
               [ Russell · Maipú · Mendoza ]
             </span>
 
-            {/* Headline Dinámico "Si hay... hay Huertana" */}
+            {/* Headline Dinámico referenciado a momentos entre amigos y familia */}
             <h1
               id="hero-heading"
               className="mt-6 font-serif text-4xl leading-[1.14] font-normal tracking-tight text-[#1B1B1B] sm:text-5xl lg:text-[3.85rem]"
             >
               <span>Si hay </span>
-              <span className="inline-block relative min-w-[240px] sm:min-w-[360px]">
+              <span className="inline-block relative min-w-[260px] sm:min-w-[420px]">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={current.slug}
@@ -63,10 +63,12 @@ export function HeroSection() {
             <p className="mt-6 max-w-xl text-base leading-relaxed text-[#1B1B1B]/85 sm:text-lg sm:leading-8">
               Mermeladas gourmet con 65% de fruta mendocina, delicatessen
               vegetales elaboradas con Aceite de Oliva Virgen Extra y salsas
-              caseras de tomate elaboradas en Russell, Maipú.
+              caseras de tomate. Alimentos nobles creados en Russell, Maipú,
+              para acompañar esas charlas, risas y sobremesas que hacen
+              inolvidable cada encuentro.
             </p>
 
-            {/* Botones de acción hacia Tiendanube */}
+            {/* Botones de acción directos a Tiendanube */}
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
               <a
                 href={HUERTANA_BRAND.storeUrl}
@@ -114,14 +116,14 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Columna Derecha: Placeholder limpio para foto oficial */}
+          {/* Columna Derecha: Placeholder limpio para foto oficial de momentos */}
           <div className="relative lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="rounded-2xl border border-[#C99A4A]/35 bg-[#FFFCF7] p-4 shadow-sm">
                 <Placeholder
-                  label="FOTOGRAFÍA OFICIAL HUERTANA"
+                  label="FOTOGRAFÍA: ENCUENTRO FAMILIAR & AMIGOS"
                   ratio="aspect-[4/4.2]"
-                  hint="Frascos de producto · Taller en Russell, Maipú"
+                  hint="Mesa compartida · Picada y conservas en Russell, Maipú"
                 />
 
                 <div className="mt-3.5 flex items-center justify-between border-t border-[#C99A4A]/20 pt-3 text-xs text-[#1B1B1B]/75">
