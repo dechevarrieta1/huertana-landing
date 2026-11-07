@@ -60,57 +60,21 @@ export function HeroSection() {
               aria-hidden="true"
             />
 
-            {/* Recomendación dinámica del momento seleccionado */}
-            <div className="mt-5 min-h-[56px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={current.slug}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="space-y-1"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-wider text-[#617248]">
-                    [ {current.badge} · {current.productLine} ]
-                  </p>
-                  <p className="max-w-xl text-base text-[#1B1B1B]/85">
-                    {current.hint}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-[#1B1B1B]/85 sm:text-lg sm:leading-8">
+              Mermeladas gourmet con 65% de fruta mendocina, delicatessen
+              vegetales elaboradas con Aceite de Oliva Virgen Extra y salsas
+              caseras de tomate elaboradas en Russell, Maipú.
+            </p>
 
-            {/* Selector interactivo de los 5 momentos exactos */}
-            <div className="mt-5 flex flex-wrap items-center gap-2">
-              <span className="text-[11px] uppercase tracking-wider text-[#1B1B1B]/60 font-semibold mr-1">
-                Momento:
-              </span>
-              {moments.map((m, i) => (
-                <button
-                  key={m.slug}
-                  type="button"
-                  onClick={() => setIndex(i)}
-                  className={`rounded-full px-3 py-1.5 text-xs transition-colors duration-200 cursor-pointer ${
-                    index === i
-                      ? "bg-[#617248] text-[#FFFCF7] font-medium"
-                      : "bg-[#FFFCF7] text-[#1B1B1B]/80 hover:bg-[#C99A4A]/20 border border-[#C99A4A]/25"
-                  }`}
-                >
-                  {m.phrase}
-                </button>
-              ))}
-            </div>
-
-            {/* Botones de acción dinámicos hacia Tiendanube */}
+            {/* Botones de acción hacia Tiendanube */}
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
               <a
-                href={current.storeUrl}
+                href={HUERTANA_BRAND.storeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#C99A4A] px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] shadow-xs transition-colors hover:bg-[#b8893b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
               >
-                Ver {current.productLine} en Tiendanube →
+                Comprar en Tiendanube →
               </a>
 
               <a
@@ -150,25 +114,15 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Columna Derecha: Placeholder adaptado al momento */}
+          {/* Columna Derecha: Placeholder limpio para foto oficial */}
           <div className="relative lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="rounded-2xl border border-[#C99A4A]/35 bg-[#FFFCF7] p-4 shadow-sm">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={current.slug}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <Placeholder
-                      label={current.placeholderLabel}
-                      ratio="aspect-[4/4.2]"
-                      hint="Espacio reservado para la foto oficial de este momento"
-                    />
-                  </motion.div>
-                </AnimatePresence>
+                <Placeholder
+                  label="FOTOGRAFÍA OFICIAL HUERTANA"
+                  ratio="aspect-[4/4.2]"
+                  hint="Frascos de producto · Taller en Russell, Maipú"
+                />
 
                 <div className="mt-3.5 flex items-center justify-between border-t border-[#C99A4A]/20 pt-3 text-xs text-[#1B1B1B]/75">
                   <span className="font-mono text-[11px] uppercase tracking-wider text-[#617248]">
