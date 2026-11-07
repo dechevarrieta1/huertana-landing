@@ -5,15 +5,15 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[#C99A4A]/40 bg-[#1B1B1B] text-[#F5F0E6]">
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 gap-8 border-b border-[#C99A4A]/25 pb-10 md:grid-cols-12">
+      <div className="mx-auto max-w-7xl px-5 py-8 sm:py-12 lg:px-12">
+        <div className="grid grid-cols-1 gap-6 border-b border-[#C99A4A]/25 pb-8 sm:gap-8 md:grid-cols-12">
           {/* Marca & Tagline */}
           <div className="md:col-span-5">
             <span className="font-serif text-2xl font-normal tracking-tight text-[#FFFCF7]">
               {HUERTANA_BRAND.name}
             </span>
 
-            <p className="mt-3 font-serif text-base italic text-[#C99A4A]">
+            <p className="mt-2 font-serif text-sm sm:text-base italic text-[#C99A4A]">
               “Si hay momento, hay Huertana.”
             </p>
 
@@ -27,7 +27,7 @@ export function Footer() {
             <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C99A4A]">
               [ NAVEGACIÓN ]
             </span>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-2.5 space-y-1.5">
               {HUERTANA_NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
@@ -46,7 +46,7 @@ export function Footer() {
             <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C99A4A]">
               [ CANALES OFICIALES ]
             </span>
-            <ul className="mt-3 space-y-2 text-xs">
+            <ul className="mt-2.5 space-y-1.5 text-xs">
               <li>
                 <a
                   href={HUERTANA_BRAND.storeUrl}
@@ -54,17 +54,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
                 >
-                  Tienda oficial: huertana.mitiendanube.com →
-                </a>
-              </li>
-              <li>
-                <a
-                  href={HUERTANA_BRAND.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
-                >
-                  Instagram: {HUERTANA_BRAND.instagramHandle} →
+                  Tienda: huertana.mitiendanube.com →
                 </a>
               </li>
               <li>
@@ -75,6 +65,16 @@ export function Footer() {
                   className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
                 >
                   WhatsApp: {HUERTANA_BRAND.whatsappDisplay} →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={HUERTANA_BRAND.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
+                >
+                  Instagram: {HUERTANA_BRAND.instagramHandle} →
                 </a>
               </li>
               <li>
@@ -91,7 +91,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 text-[11px] text-[#F5F0E6]/60 sm:flex-row">
+        <div className="mt-5 flex flex-col items-center justify-between gap-2 text-[10px] sm:text-[11px] text-[#F5F0E6]/60 sm:flex-row">
           <p>© {currentYear} Huertana. Alimentos naturales y de autor.</p>
           <p>Russell, Maipú, Mendoza, Argentina</p>
         </div>
