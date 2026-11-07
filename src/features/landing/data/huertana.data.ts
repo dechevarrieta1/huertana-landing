@@ -3,19 +3,72 @@ import type {
   BrandConfig,
   CategoryItem,
   GoogleReviewItem,
+  MomentOption,
   NavItem,
 } from "../types/huertana.types";
+
+export const HUERTANA_MOMENTS: MomentOption[] = [
+  {
+    slug: "tostada-crocante",
+    phrase: "tostada crocante",
+    fullTrigger: "Si hay tostada crocante...",
+    solution: "hay Mermelada Gourmet Huertana",
+    productLine: "Mermeladas gourmet",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/dulces/`,
+    badge: "65% Fruta Real · Sin Químicos",
+    hint: "Damasco, Pera, Frutilla, Ciruela o Cereza sobre pan tostado.",
+    placeholderLabel: "FOTO: Tostada Crocante & Mermelada Huertana",
+  },
+  {
+    slug: "picada-entre-amigos",
+    phrase: "picada entre amigos",
+    fullTrigger: "Si hay picada entre amigos...",
+    solution: "hay Delicatessen y Pastas Huertana",
+    productLine: "Delicatessen",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/salados/`,
+    badge: "100% Vegetal · Con AOVE",
+    hint: "Pasta de tomates secos, aceitunas verdes y alcauciles.",
+    placeholderLabel: "FOTO: Tabla de Picada con Delicatessen Huertana",
+  },
+  {
+    slug: "pasta-de-domingo",
+    phrase: "pasta de domingo",
+    fullTrigger: "Si hay pasta de domingo...",
+    solution: "hay Tuco Casero y Salsas Huertana",
+    productLine: "Selección Tomate",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/seleccion-tomate/`,
+    badge: "Tomate Mendocino · Receta Casera",
+    hint: "Sala Tuco tradicional, Salsa Picante o Ketchup artesanal.",
+    placeholderLabel: "FOTO: Pasta de Domingo con Tuco Huertana",
+  },
+  {
+    slug: "queso-y-pan-de-campo",
+    phrase: "queso y pan de campo",
+    fullTrigger: "Si hay queso y pan de campo...",
+    solution: "hay Jalea de Membrillo y Salsa Malbec",
+    productLine: "Especialidades de Autor",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/dulces/`,
+    badge: "Maridaje Tradicional",
+    hint: "El contraste ideal entre quesos estacionados y dulces nobles.",
+    placeholderLabel: "FOTO: Queso, Pan de Campo & Membrillo Huertana",
+  },
+  {
+    slug: "buena-mesa",
+    phrase: "buena mesa",
+    fullTrigger: "Si hay buena mesa...",
+    solution: "hay Huertana en cada rincón",
+    productLine: "Catálogo Completo & Packs",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/productos/`,
+    badge: "Alimentos de Origen",
+    hint: "Líneas dulces, saladas y packs degustación para compartir.",
+    placeholderLabel: "FOTO: Buena Mesa con Productos Huertana",
+  },
+];
 
 export const HUERTANA_BRAND: BrandConfig = {
   name: "Huertana",
   claim: "Nutrir el cuerpo, cuidar la tierra",
-  taglinePhrases: [
-    "tostada crocante",
-    "picada entre amigos",
-    "pasta de domingo",
-    "queso y pan de campo",
-    "buena mesa",
-  ],
+  moments: HUERTANA_MOMENTS,
   location: "Russell, Maipú, Mendoza, Argentina",
   addressShort: "Russell, Maipú · Mendoza",
   schedule: "Lunes a Viernes de 9:00 a 18:00 hs",
@@ -42,7 +95,7 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
   {
     id: "dulces",
     title: "Mermeladas gourmet",
-    momentTrigger: "Si hay tostada y pan tibio...",
+    momentTrigger: "Si hay tostada crocante o pan tibio...",
     momentSolution: "hay Mermelada Huertana",
     subtitle: "65% fruta mendocina · 35% azúcar",
     description:
@@ -55,7 +108,7 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
   {
     id: "salados",
     title: "Delicatessen",
-    momentTrigger: "Si hay tabla, vino y amigos...",
+    momentTrigger: "Si hay picada entre amigos...",
     momentSolution: "hay Delicatessen Huertana",
     subtitle: "Pastas vegetales con Aceite de Oliva Virgen Extra",
     description:
@@ -68,7 +121,7 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
   {
     id: "seleccion-tomate",
     title: "Selección Tomate",
-    momentTrigger: "Si hay pasta casera de domingo...",
+    momentTrigger: "Si hay pasta de domingo...",
     momentSolution: "hay Tuco y Ketchup Huertana",
     subtitle: "Tomates maduros y receta tradicional",
     description:

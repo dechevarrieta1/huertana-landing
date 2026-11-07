@@ -3,6 +3,18 @@ export interface NavItem {
   href: string;
 }
 
+export interface MomentOption {
+  slug: string;
+  phrase: string;
+  fullTrigger: string;
+  solution: string;
+  productLine: string;
+  storeUrl: string;
+  badge: string;
+  hint: string;
+  placeholderLabel: string;
+}
+
 export interface CategoryItem {
   id: string;
   title: string;
@@ -28,7 +40,7 @@ export interface GoogleReviewItem {
 export interface BrandConfig {
   name: string;
   claim: string;
-  taglinePhrases: string[];
+  moments: MomentOption[];
   location: string;
   addressShort: string;
   schedule: string;

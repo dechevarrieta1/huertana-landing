@@ -6,15 +6,16 @@ import { HUERTANA_BRAND } from "../data/huertana.data";
 import { Placeholder } from "@/components/ui/Placeholder";
 
 export function HeroSection() {
-  const phrases = HUERTANA_BRAND.taglinePhrases;
+  const moments = HUERTANA_BRAND.moments;
   const [index, setIndex] = useState(0);
+  const current = moments[index] || moments[0];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % phrases.length);
-    }, 2800);
+      setIndex((prev) => (prev + 1) % moments.length);
+    }, 3200);
     return () => clearInterval(timer);
-  }, [phrases.length]);
+  }, [moments.length]);
 
   return (
     <section
@@ -26,27 +27,27 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Columna Izquierda: Mensaje y Headline dinámico */}
           <div className="flex flex-col items-start lg:col-span-7">
-            <span className="rounded-full border border-[#C99A4A]/40 bg-[#FFFCF7] px-3.5 py-1 font-mono text-[11px] font-semibold tracking-wider uppercase text-[#617248]">
+            <span className="rounded-full border border-[#C99A4A]/40 bg-[#FFFCF7] px-3.5 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#617248]">
               [ Russell · Maipú · Mendoza ]
             </span>
 
             {/* Headline Dinámico "Si hay... hay Huertana" */}
             <h1
               id="hero-heading"
-              className="mt-6 font-serif text-4xl leading-[1.12] font-normal tracking-tight text-[#1B1B1B] sm:text-5xl lg:text-[3.85rem]"
+              className="mt-6 font-serif text-4xl leading-[1.14] font-normal tracking-tight text-[#1B1B1B] sm:text-5xl lg:text-[3.85rem]"
             >
               <span>Si hay </span>
-              <span className="inline-block relative min-w-[240px] sm:min-w-[340px]">
+              <span className="inline-block relative min-w-[240px] sm:min-w-[360px]">
                 <AnimatePresence mode="wait">
                   <motion.span
-                    key={phrases[index]}
+                    key={current.slug}
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -14 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     className="inline-block italic text-[#617248] font-medium underline decoration-[#C99A4A]/60 decoration-[2.5px] underline-offset-8"
                   >
-                    {phrases[index]}
+                    {current.phrase}
                   </motion.span>
                 </AnimatePresence>
               </span>
@@ -59,49 +60,64 @@ export function HeroSection() {
               aria-hidden="true"
             />
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-[#1B1B1B]/85 sm:text-lg sm:leading-8">
-              Mermeladas gourmet con 65% de fruta mendocina, delicatessen
-              vegetales elaboradas con Aceite de Oliva Virgen Extra y salsas
-              caseras de tomate.
-            </p>
+            {/* Recomendación dinámica del momento seleccionado */}
+            <div className="mt-5 min-h-[56px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current.slug}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="space-y-1"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-wider text-[#617248]">
+                    [ {current.badge} · {current.productLine} ]
+                  </p>
+                  <p className="max-w-xl text-base text-[#1B1B1B]/85">
+                    {current.hint}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-            {/* Selector interactivo de frases */}
-            <div className="mt-6 flex flex-wrap items-center gap-2">
+            {/* Selector interactivo de los 5 momentos exactos */}
+            <div className="mt-5 flex flex-wrap items-center gap-2">
               <span className="text-[11px] uppercase tracking-wider text-[#1B1B1B]/60 font-semibold mr-1">
                 Momento:
               </span>
-              {phrases.map((p, i) => (
+              {moments.map((m, i) => (
                 <button
-                  key={p}
+                  key={m.slug}
                   type="button"
                   onClick={() => setIndex(i)}
-                  className={`rounded-full px-3 py-1 text-xs transition-colors duration-200 cursor-pointer ${
+                  className={`rounded-full px-3 py-1.5 text-xs transition-colors duration-200 cursor-pointer ${
                     index === i
                       ? "bg-[#617248] text-[#FFFCF7] font-medium"
                       : "bg-[#FFFCF7] text-[#1B1B1B]/80 hover:bg-[#C99A4A]/20 border border-[#C99A4A]/25"
                   }`}
                 >
-                  {p}
+                  {m.phrase}
                 </button>
               ))}
             </div>
 
-            {/* Botones de acción (Sin iconos, tipografía limpia) */}
+            {/* Botones de acción dinámicos hacia Tiendanube */}
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
               <a
-                href={HUERTANA_BRAND.storeUrl}
+                href={current.storeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#C99A4A] px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] shadow-xs transition-colors hover:bg-[#b8893b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
               >
-                Comprar en Tiendanube →
+                Ver {current.productLine} en Tiendanube →
               </a>
 
               <a
                 href="#categorias"
                 className="inline-flex items-center justify-center rounded-full border border-[#1B1B1B]/20 bg-[#FFFCF7] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] transition-colors hover:border-[#C99A4A] hover:bg-[#FFFCF7]/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
               >
-                Ver 4 categorías ↓
+                Ver las 4 categorías ↓
               </a>
             </div>
 
@@ -134,15 +150,25 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Columna Derecha: Placeholder limpio editorial para foto oficial */}
+          {/* Columna Derecha: Placeholder adaptado al momento */}
           <div className="relative lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="rounded-2xl border border-[#C99A4A]/35 bg-[#FFFCF7] p-4 shadow-sm">
-                <Placeholder
-                  label="FOTOGRAFÍA OFICIAL HUERTANA"
-                  ratio="aspect-[4/4.2]"
-                  hint="Frascos de producto · Mesa artesanal en Russell"
-                />
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={current.slug}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <Placeholder
+                      label={current.placeholderLabel}
+                      ratio="aspect-[4/4.2]"
+                      hint="Espacio reservado para la foto oficial de este momento"
+                    />
+                  </motion.div>
+                </AnimatePresence>
 
                 <div className="mt-3.5 flex items-center justify-between border-t border-[#C99A4A]/20 pt-3 text-xs text-[#1B1B1B]/75">
                   <span className="font-mono text-[11px] uppercase tracking-wider text-[#617248]">
