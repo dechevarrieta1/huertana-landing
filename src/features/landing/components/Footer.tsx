@@ -1,5 +1,3 @@
-import { Leaf, ShoppingBag, MessageCircle } from "lucide-react";
-import { InstagramIcon } from "@/components/ui/BrandIcons";
 import { HUERTANA_BRAND, HUERTANA_NAV_ITEMS } from "../data/huertana.data";
 
 export function Footer() {
@@ -7,41 +5,34 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[#C99A4A]/40 bg-[#1B1B1B] text-[#F5F0E6]">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 gap-10 border-b border-[#C99A4A]/25 pb-12 md:grid-cols-12">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 gap-8 border-b border-[#C99A4A]/25 pb-10 md:grid-cols-12">
+          {/* Marca & Tagline */}
           <div className="md:col-span-5">
-            <div className="inline-flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center rounded-full border border-[#C99A4A]/60 bg-[#FFFCF7]/10 text-[#C99A4A]">
-                <Leaf className="size-4" aria-hidden="true" />
-              </span>
-              <span className="font-serif text-2xl font-normal tracking-tight text-[#FFFCF7]">
-                {HUERTANA_BRAND.name}
-              </span>
-            </div>
+            <span className="font-serif text-2xl font-normal tracking-tight text-[#FFFCF7]">
+              {HUERTANA_BRAND.name}
+            </span>
 
-            <p className="mt-4 font-serif text-lg italic text-[#C99A4A]">
-              “{HUERTANA_BRAND.coreTagline}”
-            </p>
-            <p className="mt-1 text-xs text-[#F5F0E6]/75">
-              {HUERTANA_BRAND.claim}
+            <p className="mt-3 font-serif text-base italic text-[#C99A4A]">
+              “Si hay momento, hay Huertana.”
             </p>
 
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-[#F5F0E6]/80">
-              {HUERTANA_BRAND.sector}. Seleccionados con conciencia desde{" "}
-              {HUERTANA_BRAND.location}.
+            <p className="mt-1 text-xs text-[#F5F0E6]/70">
+              {HUERTANA_BRAND.claim} · Russell, Maipú, Mendoza.
             </p>
           </div>
 
+          {/* Navegación mínima */}
           <div className="md:col-span-3">
-            <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#C99A4A]">
-              Secciones
-            </h2>
-            <ul className="mt-4 space-y-2.5">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C99A4A]">
+              [ NAVEGACIÓN ]
+            </span>
+            <ul className="mt-3 space-y-2">
               {HUERTANA_NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="rounded-sm text-sm text-[#F5F0E6]/85 transition-colors hover:text-[#C99A4A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C99A4A]"
+                    className="text-xs text-[#F5F0E6]/80 transition-colors hover:text-[#C99A4A]"
                   >
                     {item.label}
                   </a>
@@ -50,21 +41,20 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Canales oficiales */}
           <div className="md:col-span-4">
-            <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#C99A4A]">
-              Tienda y comunidad
-            </h2>
-            <ul className="mt-4 space-y-3">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C99A4A]">
+              [ CANALES OFICIALES ]
+            </span>
+            <ul className="mt-3 space-y-2 text-xs">
               <li>
                 <a
                   href={HUERTANA_BRAND.storeUrl}
-                  className="inline-flex items-center gap-2.5 rounded-sm text-sm text-[#F5F0E6]/90 transition-colors hover:text-[#C99A4A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C99A4A]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
                 >
-                  <ShoppingBag
-                    className="size-4 text-[#C99A4A]"
-                    aria-hidden="true"
-                  />
-                  <span>Tienda online oficial</span>
+                  Tienda oficial: huertana.mitiendanube.com →
                 </a>
               </li>
               <li>
@@ -72,12 +62,9 @@ export function Footer() {
                   href={HUERTANA_BRAND.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-sm text-sm text-[#F5F0E6]/90 transition-colors hover:text-[#C99A4A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C99A4A]"
+                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
                 >
-                  <InstagramIcon
-                    className="size-4 text-[#C99A4A]"
-                  />
-                  <span>Instagram ({HUERTANA_BRAND.instagramHandle})</span>
+                  Instagram: {HUERTANA_BRAND.instagramHandle} →
                 </a>
               </li>
               <li>
@@ -85,25 +72,28 @@ export function Footer() {
                   href={HUERTANA_BRAND.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-sm text-sm text-[#F5F0E6]/90 transition-colors hover:text-[#C99A4A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C99A4A]"
+                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
                 >
-                  <MessageCircle
-                    className="size-4 text-[#C99A4A]"
-                    aria-hidden="true"
-                  />
-                  <span>WhatsApp ({HUERTANA_BRAND.whatsappDisplay})</span>
+                  WhatsApp: {HUERTANA_BRAND.whatsappDisplay} →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={HUERTANA_BRAND.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F5F0E6]/90 hover:text-[#C99A4A]"
+                >
+                  Google Maps: Perfil & Reseñas →
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 text-xs text-[#F5F0E6]/70 sm:flex-row">
-          <p>
-            © {currentYear} {HUERTANA_BRAND.name}. Todos los derechos
-            reservados.
-          </p>
-          <p>Russell, Maipú, Mendoza, Argentina · Alimentos naturales y a granel</p>
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 text-[11px] text-[#F5F0E6]/60 sm:flex-row">
+          <p>© {currentYear} Huertana. Alimentos naturales y de autor.</p>
+          <p>Russell, Maipú, Mendoza, Argentina</p>
         </div>
       </div>
     </footer>

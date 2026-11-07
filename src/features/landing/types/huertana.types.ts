@@ -3,48 +3,35 @@ export interface NavItem {
   href: string;
 }
 
-export interface PillarItem {
-  id: string;
-  number: string;
-  title: string;
-  description: string;
-  iconName: "sprout" | "scale" | "handshake" | "recycle";
-}
-
 export interface CategoryItem {
   id: string;
   title: string;
+  momentTrigger: string;
+  momentSolution: string;
   subtitle: string;
   description: string;
   badge: string;
   highlights: string[];
-  imageUrl: string;
-  imageAlt: string;
+  placeholderLabel: string;
   storeUrl: string;
 }
 
-export interface MomentItem {
+export interface GoogleReviewItem {
   id: string;
-  scenario: string;
-  trigger: string;
-  solution: string;
-  description: string;
-  categoryName: string;
-  badge: string;
-  actionText: string;
-  storeUrl: string;
-  imageUrl: string;
-  imageAlt: string;
-  pairing: string;
+  author: string;
+  relativeTime: string;
+  rating: number;
+  productMentioned: string;
+  text: string;
 }
 
 export interface BrandConfig {
   name: string;
   claim: string;
-  coreTagline: string;
   taglinePhrases: string[];
-  sector: string;
   location: string;
+  addressShort: string;
+  schedule: string;
   storeUrl: string;
   allProductsUrl: string;
   instagramUrl: string;
@@ -52,4 +39,6 @@ export interface BrandConfig {
   whatsappUrl: string;
   whatsappDisplay: string;
   mapsUrl: string;
+  googleRating: number;
+  googleReviewCount: number;
 }
