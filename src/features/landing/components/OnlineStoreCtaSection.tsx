@@ -15,9 +15,13 @@ export function OnlineStoreCtaSection() {
               <span>Tienda oficial Huertana</span>
             </span>
 
+            <p className="mt-4 font-serif text-xl sm:text-2xl text-[#617248] italic font-medium">
+              “Si hay ganas de algo rico y noble, hay Huertana.”
+            </p>
+
             <h2
               id="online-store-heading"
-              className="mt-6 font-serif text-3xl leading-tight font-normal text-[#1B1B1B] sm:text-4xl lg:text-5xl"
+              className="mt-3 font-serif text-3xl leading-tight font-normal text-[#1B1B1B] sm:text-4xl lg:text-5xl"
             >
               Todo lo que necesitás para comer mejor, en un solo lugar.
             </h2>
@@ -56,7 +60,7 @@ export function OnlineStoreCtaSection() {
                   className="size-4 text-[#617248]"
                   aria-hidden="true"
                 />
-                <span>Fraccionado cuidado a granel</span>
+                <span>Elaboración artesanal en Mendoza</span>
               </span>
               <span className="inline-flex items-center gap-2">
                 <CheckCircle2

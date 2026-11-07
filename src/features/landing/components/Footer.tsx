@@ -20,7 +20,10 @@ export function Footer() {
             </div>
 
             <p className="mt-4 font-serif text-lg italic text-[#C99A4A]">
-              “{HUERTANA_BRAND.claim}”
+              “{HUERTANA_BRAND.coreTagline}”
+            </p>
+            <p className="mt-1 text-xs text-[#F5F0E6]/75">
+              {HUERTANA_BRAND.claim}
             </p>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-[#F5F0E6]/80">

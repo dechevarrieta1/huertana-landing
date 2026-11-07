@@ -23,9 +23,26 @@ export interface CategoryItem {
   storeUrl: string;
 }
 
+export interface MomentItem {
+  id: string;
+  scenario: string;
+  trigger: string;
+  solution: string;
+  description: string;
+  categoryName: string;
+  badge: string;
+  actionText: string;
+  storeUrl: string;
+  imageUrl: string;
+  imageAlt: string;
+  pairing: string;
+}
+
 export interface BrandConfig {
   name: string;
   claim: string;
+  coreTagline: string;
+  taglinePhrases: string[];
   sector: string;
   location: string;
   storeUrl: string;

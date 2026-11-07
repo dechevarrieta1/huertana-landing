@@ -2,6 +2,7 @@ import { env } from "@/lib/env";
 import type {
   BrandConfig,
   CategoryItem,
+  MomentItem,
   NavItem,
   PillarItem,
 } from "../types/huertana.types";
@@ -9,6 +10,15 @@ import type {
 export const HUERTANA_BRAND: BrandConfig = {
   name: "Huertana",
   claim: "Nutrir el cuerpo, cuidar la tierra",
+  coreTagline: "Si hay momento, hay Huertana.",
+  taglinePhrases: [
+    "tostada crocante",
+    "picada entre amigos",
+    "pasta de domingo",
+    "queso y pan de campo",
+    "ganas de algo dulce",
+    "buena mesa",
+  ],
   sector: "Mermeladas gourmet, delicatessen vegetales y salsas artesanales",
   location: "Russell, Maipú, Mendoza, Argentina",
   storeUrl: env.NEXT_PUBLIC_STORE_URL,
@@ -22,9 +32,77 @@ export const HUERTANA_BRAND: BrandConfig = {
 
 export const HUERTANA_NAV_ITEMS: NavItem[] = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Sobre Huertana", href: "#sobre-huertana" },
+  { label: "Momentos", href: "#momentos" },
   { label: "Categorías", href: "#categorias" },
+  { label: "Sobre Huertana", href: "#sobre-huertana" },
   { label: "Contacto", href: "#contacto" },
+];
+
+export const HUERTANA_MOMENTS: MomentItem[] = [
+  {
+    id: "desayuno",
+    scenario: "Desayunos & Meriendas",
+    trigger: "Si hay tostada y pan tibio...",
+    solution: "...hay Mermelada Gourmet Huertana",
+    description:
+      "Mermeladas artesanales con 65% de fruta mendocina seleccionada y 35% de azúcar. Sin conservantes, gelatinas ni colorantes.",
+    categoryName: "Mermeladas gourmet",
+    badge: "65% Fruta · Pura & Natural",
+    actionText: "Ver mermeladas en Tiendanube",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/dulces/`,
+    imageUrl:
+      "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Frascos artesanales de mermelada gourmet de frutas mendocinas",
+    pairing: "Pera · Durazno · Cereza · Uva · Damasco · Malbec",
+  },
+  {
+    id: "picada",
+    scenario: "La Picada & Aperitivos",
+    trigger: "Si hay tabla, copa de vino y amigos...",
+    solution: "...hay Delicatessen y Pastas Huertana",
+    description:
+      "Pastas vegetales 100% naturales, libres de gluten y enriquecidas con Aceite de Oliva Virgen Extra de primera presión en frío.",
+    categoryName: "Delicatessen",
+    badge: "100% Vegetal · Con AOVE · Sin TACC",
+    actionText: "Ver delicatessen en Tiendanube",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/salados/`,
+    imageUrl:
+      "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Pastas vegetales artesanales, aceitunas y conservas con aceite de oliva",
+    pairing: "Salsa Huertana · Pasta Tomate Seco · Alcaucila · Cremolacha",
+  },
+  {
+    id: "almuerzo",
+    scenario: "Cocina de Domingo",
+    trigger: "Si hay pasta casera humeante...",
+    solution: "...hay Salsa Tuco y Ketchup Huertana",
+    description:
+      "Tomates mendocinos madurados al sol y procesados con receta casera. Salsas listas para abrir y servir sabor real de hogar.",
+    categoryName: "Selección Tomate",
+    badge: "Tomate Mendocino · Receta Casera",
+    actionText: "Ver línea Tomate en Tiendanube",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/seleccion-tomate/`,
+    imageUrl:
+      "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Salsas de tomate artesanales, tuco casero e ingredientes frescos",
+    pairing: "Sala Tuco · Salsa Picante · Ketchup Natural · Barbacoa",
+  },
+  {
+    id: "regalo",
+    scenario: "Agasajar & Festejar",
+    trigger: "Si hay algo especial para celebrar...",
+    solution: "...hay Packs y Gift Card Huertana",
+    description:
+      "Regalá sabores mendocinos de autor. Cajas de degustación y tarjetas de regalo pensadas para amantes del buen comer.",
+    categoryName: "Packs y regalos",
+    badge: "Regalos & Experiencias",
+    actionText: "Ver regalos en Tiendanube",
+    storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/gif-card/`,
+    imageUrl:
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Presentación artesanal y regalos gourmet Huertana",
+    pairing: "Gift Card Digital · Sets Degustación · Presentes de Autor",
+  },
 ];
 
 export const HUERTANA_PILLARS: PillarItem[] = [
