@@ -20,11 +20,11 @@ export function Header() {
         <a
           href="#inicio"
           onClick={closeMobileMenu}
-          aria-label="Huertana - Ir al inicio"
+          aria-label="HUERTANA - Ir al inicio"
           className="flex flex-col rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
         >
           <span className="font-serif text-2xl font-normal tracking-tight text-[#1B1B1B] sm:text-[1.65rem]">
-            {HUERTANA_BRAND.name}
+            HUERTANA
           </span>
           <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#617248]">
             Russell · Mendoza
@@ -34,7 +34,7 @@ export function Header() {
         {/* Navegación Desktop */}
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-7 md:flex"
+          className="hidden items-center gap-6 lg:flex xl:gap-8"
         >
           {HUERTANA_NAV_ITEMS.map((item) => (
             <a
@@ -48,7 +48,7 @@ export function Header() {
         </nav>
 
         {/* Botón CTA Tienda */}
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <a
             href={HUERTANA_BRAND.storeUrl}
             target="_blank"
@@ -59,7 +59,7 @@ export function Header() {
           </a>
         </div>
 
-        {/* Botón Móvil Tipográfico (Sin íconos) */}
+        {/* Botón Móvil y Tablet Tipográfico (Sin íconos) */}
         <button
           type="button"
           onClick={toggleMobileMenu}
@@ -70,7 +70,7 @@ export function Header() {
               ? "Cerrar menú de navegación"
               : "Abrir menú de navegación"
           }
-          className="rounded-md border border-[#C99A4A]/40 bg-[#FFFCF7] px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] md:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
+          className="rounded-md border border-[#C99A4A]/40 bg-[#FFFCF7] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
         >
           {isMobileMenuOpen ? "Cerrar" : "Menú"}
         </button>
