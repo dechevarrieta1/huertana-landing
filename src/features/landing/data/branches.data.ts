@@ -1,4 +1,4 @@
-import type { Branch } from '../types/branches.types';
+import type { Branch } from "../types/branches.types";
 
 export const HUERTANA_BRANCHES: Branch[] = [
   {
@@ -20,12 +20,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "description": "Origen y corazón de Huertana. Taller de elaboración artesanal con 65% fruta real y aceite de oliva virgen extra. Punto de retiro oficial.",
     "isHeadquarters": true,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.75,
+      "y": 30.52
     },
     "svgCoords": {
-      "x": 192.5,
-      "y": 348.0
+      "x": 190.47,
+      "y": 305.24
     }
   },
   {
@@ -42,12 +42,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.0,
-      "y": 342.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -64,12 +64,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 135.0,
-      "y": 560.0
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -86,12 +86,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 133.38,
-      "y": 561.49
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -108,12 +108,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -60.6558,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.9,
-      "y": 31.12
+      "x": 60.08,
+      "y": 30.41
     },
     "svgCoords": {
-      "x": 372.0,
-      "y": 358.0
+      "x": 360.49,
+      "y": 304.13
     }
   },
   {
@@ -130,12 +130,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 433.0,
-      "y": 397.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -152,12 +152,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 135.22,
-      "y": 557.48
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -174,12 +174,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 428.0,
-      "y": 510.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -196,12 +196,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.0,
-      "y": 342.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -218,12 +218,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 187.38,
-      "y": 343.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -240,12 +240,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 187.38,
-      "y": 343.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -262,12 +262,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 431.38,
-      "y": 398.49
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -284,12 +284,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 433.22,
-      "y": 394.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -306,12 +306,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 390.0,
-      "y": 460.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -328,12 +328,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.22,
-      "y": 339.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -350,12 +350,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 192.5,
-      "y": 346.5
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -372,12 +372,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 190.69,
-      "y": 344.21
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -394,12 +394,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.0,
-      "y": 345.5
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -416,12 +416,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 426.38,
-      "y": 511.49
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -438,12 +438,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 395.0,
-      "y": 400.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -460,12 +460,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.0,
-      "y": 388.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -482,12 +482,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 190.88,
-      "y": 347.99
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -504,12 +504,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 434.69,
-      "y": 399.21
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -526,12 +526,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 178.0,
-      "y": 365.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -548,12 +548,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 428.22,
-      "y": 507.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -570,12 +570,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 423.38,
-      "y": 389.49
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -592,12 +592,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 424.0,
-      "y": 389.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -614,12 +614,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 429.69,
-      "y": 512.21
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -636,12 +636,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 192.72,
-      "y": 343.98
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -658,12 +658,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 136.69,
-      "y": 562.21
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -680,12 +680,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.22,
-      "y": 339.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -702,12 +702,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 176.38,
-      "y": 366.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -724,12 +724,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 132.05,
-      "y": 559.48
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -746,12 +746,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 188.0,
-      "y": 350.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -768,12 +768,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 186.38,
-      "y": 351.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -790,12 +790,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 190.69,
-      "y": 344.21
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -812,12 +812,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 137.69,
-      "y": 558.29
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -834,12 +834,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 134.13,
-      "y": 563.24
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -856,12 +856,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 133.38,
-      "y": 556.88
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -878,12 +878,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 138.0,
-      "y": 558.0
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -900,12 +900,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 197.0,
-      "y": 347.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -922,12 +922,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 195.38,
-      "y": 348.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -944,12 +944,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.0591,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 24.36,
-      "y": 50.87
+      "x": 34.29,
+      "y": 45.93
     },
     "svgCoords": {
-      "x": 134.0,
-      "y": 558.0
+      "x": 205.75,
+      "y": 459.32
     }
   },
   {
@@ -966,12 +966,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 192.0,
-      "y": 343.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -988,12 +988,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 138.44,
-      "y": 561.26
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1010,12 +1010,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 131.49,
-      "y": 561.45
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1032,12 +1032,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 430.05,
-      "y": 396.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1054,12 +1054,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 435.69,
-      "y": 395.29
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1076,12 +1076,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 186.05,
-      "y": 341.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1098,12 +1098,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 136.38,
-      "y": 559.49
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1120,12 +1120,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 195.0,
-      "y": 412.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1142,12 +1142,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.22,
-      "y": 385.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1164,12 +1164,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 135.0,
-      "y": 598.0
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1186,12 +1186,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 207.0,
-      "y": 349.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1208,12 +1208,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 431.5,
-      "y": 395.5
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1230,12 +1230,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 136.67,
-      "y": 556.44
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1252,12 +1252,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 191.0,
-      "y": 343.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1274,12 +1274,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 205.38,
-      "y": 350.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1296,12 +1296,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 424.0,
-      "y": 393.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1318,12 +1318,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 136.21,
-      "y": 563.87
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1340,12 +1340,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 187.0,
-      "y": 349.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1362,12 +1362,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 422.38,
-      "y": 390.49
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1384,12 +1384,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.05,
-      "y": 509.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1406,12 +1406,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 207.22,
-      "y": 346.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1428,12 +1428,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 424.5,
-      "y": 387.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1450,12 +1450,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 186.05,
-      "y": 341.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1472,12 +1472,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 432.13,
-      "y": 400.24
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1494,12 +1494,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 191.69,
-      "y": 340.29
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1516,12 +1516,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.0591,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 24.36,
-      "y": 50.87
+      "x": 34.29,
+      "y": 45.93
     },
     "svgCoords": {
-      "x": 136.0,
-      "y": 545.0
+      "x": 205.75,
+      "y": 459.32
     }
   },
   {
@@ -1538,12 +1538,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 185.38,
-      "y": 350.49
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1560,12 +1560,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 424.22,
-      "y": 386.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1582,12 +1582,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 430.69,
-      "y": 508.29
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1604,12 +1604,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 188.13,
-      "y": 345.24
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1626,12 +1626,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.69,
-      "y": 391.21
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1648,12 +1648,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 131.39,
-      "y": 557.91
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1670,12 +1670,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 187.38,
-      "y": 346.99
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1692,12 +1692,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 194.0,
-      "y": 347.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1714,12 +1714,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.0,
-      "y": 339.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1736,12 +1736,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 139.18,
-      "y": 559.08
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1758,12 +1758,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -60.6558,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.9,
-      "y": 31.12
+      "x": 60.08,
+      "y": 30.41
     },
     "svgCoords": {
-      "x": 370.0,
-      "y": 318.0
+      "x": 360.49,
+      "y": 304.13
     }
   },
   {
@@ -1780,12 +1780,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.0,
-      "y": 518.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1802,12 +1802,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.0591,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 24.36,
-      "y": 50.87
+      "x": 34.29,
+      "y": 45.93
     },
     "svgCoords": {
-      "x": 134.38,
-      "y": 546.49
+      "x": 205.75,
+      "y": 459.32
     }
   },
   {
@@ -1824,12 +1824,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 427.13,
-      "y": 513.24
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1846,12 +1846,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 187.38,
-      "y": 338.88
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1868,12 +1868,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 194.19,
-      "y": 348.71
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1890,12 +1890,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 132.47,
-      "y": 563.59
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1912,12 +1912,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 134.42,
-      "y": 555.54
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -1934,12 +1934,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 192.44,
-      "y": 343.26
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -1956,12 +1956,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 426.38,
-      "y": 506.88
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -1978,12 +1978,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 185.49,
-      "y": 343.45
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2000,12 +2000,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.55,
-      "y": 345.98
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2022,12 +2022,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 197.22,
-      "y": 344.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2044,12 +2044,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.22,
-      "y": 342.98
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2066,12 +2066,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 196.0,
-      "y": 357.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2088,12 +2088,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 190.67,
-      "y": 338.44
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2110,12 +2110,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 138.52,
-      "y": 562.96
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2132,12 +2132,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 130.31,
-      "y": 560.19
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2154,12 +2154,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 138.4,
-      "y": 556.62
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2176,12 +2176,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 134.77,
-      "y": 564.88
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2198,12 +2198,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 178.0,
-      "y": 448.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2220,12 +2220,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 420.0,
-      "y": 386.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2242,12 +2242,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 431.38,
-      "y": 393.88
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2264,12 +2264,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 365.0,
-      "y": 405.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2286,12 +2286,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 425.5,
-      "y": 388.5
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2308,12 +2308,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 436.44,
-      "y": 398.26
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2330,12 +2330,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -64.1888,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 51.19,
-      "y": 31.42
+      "x": 47.77,
+      "y": 26.64
     },
     "svgCoords": {
-      "x": 308.0,
-      "y": 335.0
+      "x": 286.65,
+      "y": 266.42
     }
   },
   {
@@ -2352,12 +2352,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 421.0,
-      "y": 385.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2374,12 +2374,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.0591,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 24.36,
-      "y": 50.87
+      "x": 34.29,
+      "y": 45.93
     },
     "svgCoords": {
-      "x": 136.22,
-      "y": 542.48
+      "x": 205.75,
+      "y": 459.32
     }
   },
   {
@@ -2396,12 +2396,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 429.49,
-      "y": 398.45
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2418,12 +2418,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 131.81,
-      "y": 556.18
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2440,12 +2440,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 434.67,
-      "y": 393.44
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2462,12 +2462,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 418.0,
-      "y": 382.0
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2484,12 +2484,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 204.0,
-      "y": 348.0
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2506,12 +2506,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 190.21,
-      "y": 345.87
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2528,12 +2528,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 188.22,
-      "y": 347.48
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2550,12 +2550,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 421.05,
-      "y": 388.48
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2572,12 +2572,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 140.02,
-      "y": 560.68
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2594,12 +2594,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.303,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 44.46,
-      "y": 94.86
+      "x": 33.44,
+      "y": 94.92
     },
     "svgCoords": {
-      "x": 243.0,
-      "y": 936.0
+      "x": 200.65,
+      "y": 949.15
     }
   },
   {
@@ -2616,12 +2616,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.5364,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 28.76,
-      "y": 29.17
+      "x": 32.63,
+      "y": 26.92
     },
     "svgCoords": {
-      "x": 189.0,
-      "y": 282.0
+      "x": 195.78,
+      "y": 269.24
     }
   },
   {
@@ -2638,12 +2638,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 422.38,
-      "y": 394.49
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2660,12 +2660,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -58.3816,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 60.06,
-      "y": 47.74
+      "x": 68,
+      "y": 34.58
     },
     "svgCoords": {
-      "x": 426.69,
-      "y": 387.29
+      "x": 408.03,
+      "y": 345.8
     }
   },
   {
@@ -2682,12 +2682,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 130.77,
-      "y": 562.94
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2704,12 +2704,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 189.69,
-      "y": 352.21
+      "x": 189.31,
+      "y": 302.7
     }
   },
   {
@@ -2726,12 +2726,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -71.3103,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 35.27,
-      "y": 55.18
+      "x": 22.97,
+      "y": 51.89
     },
     "svgCoords": {
-      "x": 136.15,
-      "y": 554.89
+      "x": 137.8,
+      "y": 518.9
     }
   },
   {
@@ -2748,12 +2748,12 @@ export const HUERTANA_BRANCHES: Branch[] = [
     "longitude": -68.8458,
     "isHeadquarters": false,
     "mapPosition": {
-      "x": 31.81,
-      "y": 38.61
+      "x": 31.55,
+      "y": 30.27
     },
     "svgCoords": {
-      "x": 185.39,
-      "y": 339.91
+      "x": 189.31,
+      "y": 302.7
     }
   }
 ];
