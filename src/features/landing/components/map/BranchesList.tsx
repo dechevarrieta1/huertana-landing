@@ -255,12 +255,12 @@ export function BranchesList({
         )}
       </div>
 
-      {/* Listado scrolleable accesible */}
+      {/* Listado scrolleable accesible con altura fija estable para evitar saltos */}
       <div
         ref={listContainerRef}
         role="feed"
         aria-label="Listado de sucursales y puntos de venta"
-        className="max-h-[320px] space-y-2 overflow-y-auto pr-1 scrollbar-thin"
+        className="h-[360px] space-y-2 overflow-y-auto pr-1 scrollbar-thin"
       >
         {filteredBranches.length === 0 ? (
           <div className="rounded-xl border border-dashed border-[#C99A4A]/35 bg-[#FFFCF7] p-5 text-center space-y-2">
@@ -333,9 +333,9 @@ function StoreItemCard({
       }`}
     >
       <div className="flex items-start justify-between gap-2.5">
-        <div className="min-w-0 flex-1 space-y-1">
+        <div className="min-w-0 flex-1 space-y-1.5">
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="font-serif text-xs font-semibold text-[#1B1B1B] group-hover:text-[#BA8840] transition-colors truncate">
+            <span className="font-serif text-xs font-semibold text-[#1B1B1B] group-hover:text-[#BA8840] transition-colors break-words">
               {branch.name}
             </span>
             <span
@@ -352,11 +352,11 @@ function StoreItemCard({
             </span>
           </div>
 
-          <p className="flex items-start gap-1 text-[11px] text-[#1B1B1B]/80 leading-snug">
+          <p className="flex items-start gap-1 text-[11px] text-[#1B1B1B]/80 leading-snug break-words">
             <MapPin className="h-3 w-3 shrink-0 text-[#617248] mt-0.5" aria-hidden="true" />
-            <span className="truncate">{branch.address}</span>
+            <span>{branch.address}</span>
             {branch.postalCode && (
-              <span className="font-mono text-[10px] text-[#1B1B1B]/55 shrink-0">
+              <span className="font-mono text-[10px] text-[#1B1B1B]/55 shrink-0 ml-1">
                 (CP {branch.postalCode})
               </span>
             )}
