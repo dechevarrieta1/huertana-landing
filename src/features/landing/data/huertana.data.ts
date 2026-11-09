@@ -77,7 +77,7 @@ export const HUERTANA_MOMENTS: MomentOption[] = [
 ];
 
 export const HUERTANA_BRAND: BrandConfig = {
-  name: "Huertana",
+  name: "HUERTANA",
   claim: "Nutrir el cuerpo, cuidar la tierra",
   moments: HUERTANA_MOMENTS,
   location: "Russell, Maipú, Mendoza, Argentina",

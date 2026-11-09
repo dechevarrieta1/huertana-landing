@@ -141,7 +141,7 @@ export const ARGENTINA_PROVINCES: ProvincePathData[] = [
       "x": 82.28,
       "y": 18.43
     },
-    "hasBranch": true
+    "hasBranch": false
   },
   {
     "id": "LARIOJA",
@@ -225,7 +225,7 @@ export const ARGENTINA_PROVINCES: ProvincePathData[] = [
       "x": 39.15,
       "y": 37.0
     },
-    "hasBranch": true
+    "hasBranch": false
   },
   {
     "id": "MENDOZA",
@@ -309,7 +309,7 @@ export const ARGENTINA_PROVINCES: ProvincePathData[] = [
       "x": 35.47,
       "y": 65.39
     },
-    "hasBranch": false
+    "hasBranch": true
   },
   {
     "id": "SANTACRUZ",

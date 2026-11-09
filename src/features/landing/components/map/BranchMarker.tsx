@@ -7,6 +7,7 @@ import { MascotIllustration } from "./MascotIllustration";
 
 interface BranchMarkerProps {
   branch: Branch;
+  storeCount?: number;
   isSelected: boolean;
   isHovered: boolean;
   onSelect: (branch: Branch) => void;
@@ -15,6 +16,7 @@ interface BranchMarkerProps {
 
 export function BranchMarker({
   branch,
+  storeCount,
   isSelected,
   isHovered,
   onSelect,
@@ -51,9 +53,13 @@ export function BranchMarker({
                   : "bg-[#DCCBA3]"
               }`}
             />
-            <span>{branch.locality}</span>
+            <span>{branch.province}</span>
             <span className="text-[9px] text-[#DCCBA3] uppercase tracking-wider">
-              {branch.isHeadquarters ? "Taller Central" : isHub ? "Distribución" : "Punto Venta"}
+              {branch.isHeadquarters
+                ? "Taller Central"
+                : storeCount
+                ? `${storeCount} ${storeCount === 1 ? "punto" : "puntos"}`
+                : "Punto de Venta"}
             </span>
             <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1B1B1B]" />
           </motion.div>
@@ -106,18 +112,18 @@ export function BranchMarker({
               highlighted={isSelected || isHovered}
             />
 
-            {/* Micro-badge de tipo en la esquina */}
+            {/* Micro-badge de tipo o cantidad en la esquina */}
             <span
-              className={`absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold text-white shadow-xs border border-white ${
+              className={`absolute -bottom-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full text-[9px] font-bold text-white shadow-xs border border-white ${
                 branch.isHeadquarters
                   ? "bg-[#C99A4A]"
                   : isHub
                   ? "bg-[#617248]"
                   : "bg-[#8C6D42]"
               }`}
-              title={branch.typeLabel}
+              title={`${branch.province}: ${storeCount ?? 1} puntos`}
             >
-              {branch.isHeadquarters ? "★" : isHub ? "D" : "V"}
+              {branch.isHeadquarters ? "★" : storeCount ?? "•"}
             </span>
           </motion.div>
         </button>

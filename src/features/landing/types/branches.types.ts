@@ -9,6 +9,7 @@ export interface Branch {
   provinceId: string;
   locality: string;
   address: string;
+  postalCode?: string;
   latitude: number;
   longitude: number;
   phone?: string;
