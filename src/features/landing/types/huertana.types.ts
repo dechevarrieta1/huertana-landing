@@ -25,6 +25,9 @@ export interface CategoryItem {
   badge: string;
   highlights: string[];
   placeholderLabel: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imagePosition?: string;
   storeUrl: string;
 }
 

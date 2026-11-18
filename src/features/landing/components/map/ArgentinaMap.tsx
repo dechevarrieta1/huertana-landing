@@ -1,14 +1,27 @@
 "use client";
 
 import React from "react";
-import {
-  ARGENTINA_PROVINCES,
-  ARGENTINA_MAP_CONFIG,
-} from "../../data/argentinaProvinces.data";
+import { ARGENTINA_PROVINCES } from "../../data/argentinaProvinces.data";
 import type { Branch } from "../../types/branches.types";
 import { BranchMarker } from "./BranchMarker";
 import { MascotIllustration } from "./MascotIllustration";
-import { MapPin, Sparkles } from "lucide-react";
+import { MapPin } from "lucide-react";
+
+const MAP_VIEWBOX = {
+  x: 35,
+  y: 25,
+  width: 530,
+  height: 950,
+  value: "35 25 530 950",
+} as const;
+
+// Coordenadas SVG calibradas dentro de cada provincia para evitar superposición de isologos
+const PROVINCE_MARKER_OVERRIDES: Record<string, { x: number; y: number }> = {
+  SANJUAN: { x: 182, y: 240 },
+  CORDOBA: { x: 298, y: 286 },
+  SANTAFE: { x: 362, y: 232 },
+  RIONEGRO: { x: 232, y: 496 },
+};
 
 interface ArgentinaMapProps {
   branches: Branch[];
@@ -88,6 +101,19 @@ export function ArgentinaMap({
     ? countByProvinceId.get(activeProvinceId) || 0
     : 0;
 
+  // Coordenadas porcentuales de cada marcador respecto al viewBox calibrado
+  const markerPositionByProvinceId = React.useMemo(() => {
+    const map = new Map<string, { x: number; y: number }>();
+    ARGENTINA_PROVINCES.forEach((province) => {
+      const point = PROVINCE_MARKER_OVERRIDES[province.id] ?? province.centroid;
+      map.set(province.id, {
+        x: ((point.x - MAP_VIEWBOX.x) / MAP_VIEWBOX.width) * 100,
+        y: ((point.y - MAP_VIEWBOX.y) / MAP_VIEWBOX.height) * 100,
+      });
+    });
+    return map;
+  }, []);
+
   return (
     <div
       className="relative w-full overflow-hidden rounded-2xl border border-[#C99A4A]/25 bg-[#F5F0E5] shadow-xs select-none"
@@ -111,43 +137,44 @@ export function ArgentinaMap({
         aria-hidden="true"
       />
 
-      {/* Sello editorial Huertana: "Si hay mesa Argentina / HAY HUERTANA" */}
-      <div className="absolute right-4 bottom-20 sm:right-7 sm:bottom-28 z-10 text-right pointer-events-none max-w-[190px] sm:max-w-[240px] hidden sm:block">
-        <p className="font-serif italic text-base sm:text-xl font-medium text-[#1B1B1B] leading-tight">
-          Si hay mesa <br />
-          <span className="font-semibold text-lg sm:text-2xl not-italic">
-            Argentina
-          </span>
-        </p>
-        <div className="mt-1.5 inline-block rounded-md bg-[#B88944] px-2.5 py-1 text-[11px] sm:text-xs font-serif font-bold tracking-wider text-[#FFFCF7] shadow-xs">
-          HAY HUERTANA
-        </div>
-        <p className="mt-2 text-[10px] sm:text-[11px] font-sans text-[#1B1B1B]/70 leading-snug">
-          Alimentos genuinos nacidos en Russell, Maipú · Mendoza
-        </p>
-      </div>
+      {/* Área visual del mapa (aislada de la barra inferior para evitar superposiciones) */}
+      <div className="relative px-2 py-3 sm:px-4 sm:py-4">
+        {/* Sello editorial Huertana y pie artesanal en zona atlántica libre */}
+        <div className="pointer-events-none absolute right-5 bottom-6 sm:right-7 sm:bottom-8 z-10 hidden sm:flex flex-col items-end text-right max-w-[230px]">
+          <p className="font-serif italic text-base sm:text-xl font-medium text-[#1B1B1B] leading-tight">
+            Si hay mesa <br />
+            <span className="font-semibold text-lg sm:text-2xl not-italic">
+              Argentina
+            </span>
+          </p>
+          <div className="mt-1.5 inline-block rounded-md bg-[#B88944] px-2.5 py-1 text-[11px] sm:text-xs font-serif font-bold tracking-wider text-[#FFFCF7] shadow-xs">
+            HAY HUERTANA
+          </div>
+          <p className="mt-2 text-[10px] sm:text-[11px] font-sans text-[#1B1B1B]/70 leading-snug">
+            Alimentos genuinos nacidos en Russell, Maipú · Mendoza
+          </p>
 
-      {/* Personaje ilustrado y pie del mapa */}
-      <div className="absolute left-6 bottom-3 z-10 pointer-events-none opacity-90 hidden sm:flex items-center gap-2.5">
-        <MascotIllustration size={42} highlighted={false} />
-        <div>
-          <span className="font-serif text-[11px] font-semibold text-[#1B1B1B] block">
-            Elaboración Artesanal
-          </span>
-          <span className="font-sans text-[10px] text-[#617248]">
-            Desde Russell hacia todo el país
-          </span>
+          <div className="mt-4 flex items-center gap-2 opacity-90">
+            <div>
+              <span className="font-serif text-[11px] font-semibold text-[#1B1B1B] block">
+                Elaboración Artesanal
+              </span>
+              <span className="font-sans text-[10px] text-[#617248]">
+                Desde Russell hacia todo el país
+              </span>
+            </div>
+            <MascotIllustration size={36} highlighted={false} />
+          </div>
         </div>
-      </div>
 
-      {/* Contenedor relativo SVG escalable manteniendo proporciones oficiales */}
-      <div className="relative aspect-[600/1000] w-full max-w-[540px] mx-auto py-2">
-        <svg
-          viewBox={ARGENTINA_MAP_CONFIG.viewBox}
-          className="h-full w-full drop-shadow-sm"
-          role="group"
-          aria-label="Mapa de provincias argentinas"
-        >
+        {/* Contenedor relativo SVG escalable manteniendo proporciones oficiales */}
+        <div className="relative aspect-[530/950] w-full max-w-[620px] mx-auto">
+          <svg
+            viewBox={MAP_VIEWBOX.value}
+            className="h-full w-full drop-shadow-sm"
+            role="group"
+            aria-label="Mapa de provincias argentinas"
+          >
           <desc>
             Mapa vectorial ilustrado de la República Argentina destacando las provincias con puntos de venta y retiros de Huertana. Navegá por teclado con Tab y Enter para seleccionar una provincia.
           </desc>
@@ -253,6 +280,7 @@ export function ArgentinaMap({
               <BranchMarker
                 key={branch.id}
                 branch={branch}
+                position={markerPositionByProvinceId.get(branch.provinceId)}
                 storeCount={storeCount}
                 isSelected={isSelected}
                 isHovered={isHovered}
@@ -264,6 +292,7 @@ export function ArgentinaMap({
               />
             );
           })}
+        </div>
         </div>
       </div>
 

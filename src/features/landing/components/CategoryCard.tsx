@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Placeholder } from "@/components/ui/Placeholder";
 import type { CategoryItem } from "../types/huertana.types";
 
@@ -9,14 +10,30 @@ export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <article className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-[#C99A4A]/30 bg-[#FFFCF7] p-5 shadow-xs transition-all duration-200 hover:border-[#C99A4A] sm:p-7">
       <div>
-        {/* Placeholder visible en tablet/desktop, oculto en mobile para evitar scroll excesivo */}
-        <div className="hidden sm:block mb-5">
-          <Placeholder
-            label={category.placeholderLabel}
-            ratio="aspect-[16/10]"
-            hint="Reemplazable con foto oficial de la categoría"
-          />
-        </div>
+        {category.imageSrc ? (
+          <div className="mb-4 sm:mb-5">
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#C99A4A]/30 bg-[#EFECE6]">
+              <Image
+                src={category.imageSrc}
+                alt={category.imageAlt ?? category.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 560px"
+                className={`object-cover transition-transform duration-500 group-hover:scale-[1.03] ${
+                  category.imagePosition ?? "object-center"
+                }`}
+              />
+            </div>
+          </div>
+        ) : (
+          /* Placeholder visible en tablet/desktop, oculto en mobile para evitar scroll excesivo */
+          <div className="hidden sm:block mb-5">
+            <Placeholder
+              label={category.placeholderLabel}
+              ratio="aspect-[16/10]"
+              hint="Reemplazable con foto oficial de la categoría"
+            />
+          </div>
+        )}
 
         <div>
           <span className="font-mono text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#617248]">

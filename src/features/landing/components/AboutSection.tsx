@@ -1,4 +1,4 @@
-import { Placeholder } from "@/components/ui/Placeholder";
+import Image from "next/image";
 
 const BRAND_PRINCIPLES = [
   {
@@ -40,14 +40,17 @@ export function AboutSection() {
           {/* Columna Izquierda: Oculto en mobile para no duplicar scroll, visible en desktop */}
           <div className="hidden lg:block lg:col-span-5">
             <div className="rounded-2xl border border-[#C99A4A]/35 bg-[#F5F0E6] p-4">
-              <Placeholder
-                label="FOTOGRAFÍA: ELABORACIÓN A LA VISTA"
-                ratio="aspect-[4/4.2]"
-                hint="Cocina abierta y taller artesanal en Russell, Maipú"
-              />
+              <div className="relative w-full aspect-[4/4.2] overflow-hidden rounded-xl border border-[#C99A4A]/30 bg-[#EFECE6]">
+                <Image
+                  src="/images/about-elaboracion.webp"
+                  alt="Mano sirviendo mermelada artesanal Huertana desde frasco de vidrio hacia un pocillo de cerámica"
+                  fill
+                  sizes="(min-width: 1024px) 42vw, 1px"
+                  className="object-cover object-[50%_30%]"
+                />
+              </div>
 
-              <div className="mt-3.5 flex items-center justify-between border-t border-[#C99A4A]/25 pt-3 text-xs text-[#1B1B1B]/70 font-mono">
-                <span>[ TALLER TRANSPARENTE ]</span>
+              <div className="mt-3.5 flex items-center justify-end border-t border-[#C99A4A]/25 pt-3 text-xs text-[#1B1B1B]/70 font-mono">
                 <span className="text-[#617248] font-semibold">Russell · Maipú</span>
               </div>
             </div>

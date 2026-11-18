@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { HUERTANA_BRAND, HUERTANA_NAV_ITEMS } from "../data/huertana.data";
 import { useHeaderNavigation } from "../hooks/useHeaderNavigation";
 
@@ -16,19 +17,29 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        {/* Logo / Marca puramente tipográfica */}
+        {/* Logo / Marca con Isologo oficial */}
         <a
           href="#inicio"
           onClick={closeMobileMenu}
           aria-label="HUERTANA - Ir al inicio"
-          className="flex flex-col rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
+          className="flex items-center gap-2.5 sm:gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
         >
-          <span className="font-serif text-2xl font-normal tracking-tight text-[#1B1B1B] sm:text-[1.65rem]">
-            HUERTANA
-          </span>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#617248]">
-            Russell · Mendoza
-          </span>
+          <Image
+            src="/images/huertana-isologo.png"
+            alt=""
+            width={600}
+            height={800}
+            priority
+            className="h-9 w-auto sm:h-11 shrink-0 object-contain"
+          />
+          <div className="flex flex-col">
+            <span className="font-serif text-2xl font-normal leading-none tracking-tight text-[#1B1B1B] sm:text-[1.65rem]">
+              HUERTANA
+            </span>
+            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#617248]">
+              Russell · Mendoza
+            </span>
+          </div>
         </a>
 
         {/* Navegación Desktop */}

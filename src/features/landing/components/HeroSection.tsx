@@ -1,14 +1,33 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { HUERTANA_BRAND } from "../data/huertana.data";
-import { Placeholder } from "@/components/ui/Placeholder";
+
+const HERO_PHOTOS = [
+  {
+    src: "/images/hero-mesa-huertana.webp",
+    alt: "Degustación de pastas artesanales Huertana sobre mesa de madera junto a una botella de Malbec y copa grabada",
+    objectPosition: "object-[50%_68%]",
+  },
+  {
+    src: "/images/hero-copa-huertana.webp",
+    alt: "Persona sonriendo con una copa de vino tinto grabada con el logo de Huertana",
+    objectPosition: "object-[50%_18%]",
+  },
+  {
+    src: "/images/hero-picada-huertana.webp",
+    alt: "Picada al aire libre con frascos de delicatessen Huertana, quesos, focaccia, pan artesanal y copas de vino",
+    objectPosition: "object-[50%_58%]",
+  },
+] as const;
 
 export function HeroSection() {
   const moments = HUERTANA_BRAND.moments;
   const [index, setIndex] = useState(0);
   const current = moments[index] || moments[0];
+  const activePhotoIndex = index % HERO_PHOTOS.length;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -115,17 +134,35 @@ export function HeroSection() {
           <div className="hidden lg:block lg:col-span-5">
             <div className="relative mx-auto max-w-none">
               <div className="rounded-2xl border border-[#C99A4A]/35 bg-[#FFFCF7] p-4 shadow-sm">
-                <Placeholder
-                  label="FOTOGRAFÍA: ENCUENTRO FAMILIAR & AMIGOS"
-                  ratio="aspect-[4/4.2]"
-                  hint="Mesa compartida · Picada y conservas en Russell, Maipú"
-                />
+                <div className="relative w-full aspect-[4/4.2] overflow-hidden rounded-xl border border-[#C99A4A]/30 bg-[#EFECE6]">
+                  {HERO_PHOTOS.map((photo, photoIdx) => {
+                    const isActive = photoIdx === activePhotoIndex;
+                    return (
+                      <motion.div
+                        key={photo.src}
+                        initial={false}
+                        animate={{ opacity: isActive ? 1 : 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        aria-hidden={!isActive}
+                        className="absolute inset-0"
+                      >
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          priority={photoIdx === 0}
+                          sizes="(min-width: 1024px) 42vw, 1px"
+                          className={`object-cover ${photo.objectPosition}`}
+                        />
+                      </motion.div>
+                    );
+                  })}
+                </div>
 
                 <div className="mt-3.5 flex items-center justify-between border-t border-[#C99A4A]/20 pt-3 text-xs text-[#1B1B1B]/75">
                   <span className="font-mono text-[11px] uppercase tracking-wider text-[#617248]">
                     [ ORIGEN MAIPÚ ]
                   </span>
-                  <span>Envases de vidrio reciclables</span>
                 </div>
               </div>
             </div>

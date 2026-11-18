@@ -114,6 +114,10 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
     badge: "65% Fruta · Sin Conservantes",
     highlights: ["Pera", "Durazno", "Cereza", "Uva", "Salsa Malbec", "Damasco"],
     placeholderLabel: "FOTO: Frascos Mermeladas Gourmet",
+    imageSrc: "/images/category-mermeladas.webp",
+    imageAlt:
+      "Cuchara con mermelada artesanal Huertana sobre pocillo blanco, frutillas frescas y frasco de mermelada",
+    imagePosition: "object-[50%_48%]",
     storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/dulces/`,
   },
   {
@@ -127,6 +131,10 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
     badge: "100% Vegetal · Con AOVE · Sin TACC",
     highlights: ["Salsa Huertana", "Tomates Secos", "Alcaucila", "Cremolacha", "Zanajioli"],
     placeholderLabel: "FOTO: Delicatessen & Pastas Vegetales",
+    imageSrc: "/images/category-delicatessen.webp",
+    imageAlt:
+      "Frascos abiertos de delicatessen Huertana en mesa al sol, con Pasta de Tomate Seco 100% vegetal en primer plano",
+    imagePosition: "object-[50%_44%]",
     storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/salados/`,
   },
   {
@@ -140,6 +148,10 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
     badge: "Tomate Mendocino · Receta Casera",
     highlights: ["Sala Tuco", "Salsa Picante", "Ketchup Natural", "Salsa Barbacoa"],
     placeholderLabel: "FOTO: Salsas de Tomate & Tuco",
+    imageSrc: "/images/category-tomate.webp",
+    imageAlt:
+      "Botellas de la línea Selección Tomate Huertana sobre tronco de madera: Barbacoa, Passata, Ketchup, Salsa Tuco y Salsa de Tomate Picante",
+    imagePosition: "object-[50%_66%]",
     storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/seleccion-tomate/`,
   },
   {
@@ -153,6 +165,10 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
     badge: "Regalos & Experiencias",
     highlights: ["Gift Card Digital", "Cajas Degustación", "Regalos de Autor"],
     placeholderLabel: "FOTO: Cajas de Regalo & Gift Cards",
+    imageSrc: "/images/category-packs.webp",
+    imageAlt:
+      "Caja de madera de regalo Huertana con seis frascos degustación de mermeladas y delicatessen artesanales",
+    imagePosition: "object-[50%_62%]",
     storeUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/gif-card/`,
   },
 ];
