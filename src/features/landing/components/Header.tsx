@@ -12,17 +12,17 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-[#F5F0E6]/95 backdrop-blur-md border-b border-[#C99A4A]/30 shadow-[0_2px_16px_rgba(27,27,27,0.03)]"
-          : "bg-[#F5F0E6] border-b border-[#C99A4A]/25"
+          ? "bg-[#FBF7EB]/95 backdrop-blur-md border-b border-[#C09B5D]/35 shadow-[0_2px_16px_rgba(27,27,27,0.04)]"
+          : "bg-[#FBF7EB] border-b border-[#CCBFA4]/60"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        {/* Logo / Marca con Isologo oficial */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8 lg:px-12">
+        {/* Marca oficial: Isotipo + Logotipo según Manual de Normas Gráficas */}
         <a
-          href="#inicio"
+          href="/#inicio"
           onClick={closeMobileMenu}
-          aria-label="HUERTANA - Ir al inicio"
-          className="flex items-center gap-2.5 sm:gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
+          aria-label="HUERTANA - Ir al inicio (Nosotros)"
+          className="flex items-center gap-3 rounded-sm py-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
         >
           <Image
             src="/images/huertana-isologo.png"
@@ -30,14 +30,14 @@ export function Header() {
             width={600}
             height={800}
             priority
-            className="h-9 w-auto sm:h-11 shrink-0 object-contain"
+            className="h-10 w-auto sm:h-11 shrink-0 object-contain"
           />
           <div className="flex flex-col">
-            <span className="font-serif text-2xl font-normal leading-none tracking-tight text-[#1B1B1B] sm:text-[1.65rem]">
-              HUERTANA
+            <span className="font-serif text-[1.45rem] font-normal leading-none tracking-tight text-[#1B1B1B] sm:text-[1.65rem]">
+              HUERTANA<sup className="ml-0.5 text-[9px] font-ui font-medium align-super">®</sup>
             </span>
-            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#617248]">
-              Russell · Mendoza
+            <span className="mt-1 font-ui text-[9px] font-medium uppercase tracking-[0.22em] text-[#9B773C]">
+              {HUERTANA_BRAND.originSubtitle}
             </span>
           </div>
         </a>
@@ -45,13 +45,13 @@ export function Header() {
         {/* Navegación Desktop */}
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-6 lg:flex xl:gap-8"
+          className="hidden items-center gap-5 lg:flex xl:gap-7"
         >
           {HUERTANA_NAV_ITEMS.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-xs font-semibold uppercase tracking-wider text-[#1B1B1B]/80 transition-colors duration-200 hover:text-[#1B1B1B] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
+              className="font-ui text-[11px] font-medium uppercase tracking-[0.12em] text-[#1B1B1B]/80 transition-colors duration-200 hover:text-[#9B773C] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B1B1B]"
             >
               {item.label}
             </a>
@@ -64,13 +64,13 @@ export function Header() {
             href={HUERTANA_BRAND.storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#C99A4A] px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] shadow-xs transition-colors duration-200 hover:bg-[#b8893b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
+            className="rounded-full bg-[#C09B5D] px-5 py-2.5 font-ui text-[11px] font-bold uppercase tracking-[0.12em] text-[#1B1B1B] shadow-xs transition-colors duration-200 hover:bg-[#AD874A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
           >
             Tienda online →
           </a>
         </div>
 
-        {/* Botón Móvil y Tablet Tipográfico (Sin íconos) */}
+        {/* Botón Móvil y Tablet Tipográfico */}
         <button
           type="button"
           onClick={toggleMobileMenu}
@@ -81,18 +81,18 @@ export function Header() {
               ? "Cerrar menú de navegación"
               : "Abrir menú de navegación"
           }
-          className="rounded-md border border-[#C99A4A]/40 bg-[#FFFCF7] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
+          className="rounded-md border border-[#CCBFA4] bg-[#FFFDF8] px-3.5 py-1.5 font-ui text-[11px] font-medium uppercase tracking-wider text-[#1B1B1B] lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
         >
           {isMobileMenuOpen ? "Cerrar" : "Menú"}
         </button>
       </div>
 
-      {/* Menú Móvil */}
+      {/* Menú Móvil y Tablet */}
       {isMobileMenuOpen && (
         <nav
           id="mobile-navigation"
           aria-label="Navegación móvil"
-          className="border-t border-[#C99A4A]/30 bg-[#FFFCF7] px-5 py-6 shadow-lg md:hidden"
+          className="border-t border-[#CCBFA4]/60 bg-[#FFFDF8] px-5 py-6 shadow-lg lg:hidden"
         >
           <ul className="flex flex-col space-y-3.5">
             {HUERTANA_NAV_ITEMS.map((item) => (
@@ -100,20 +100,20 @@ export function Header() {
                 <a
                   href={item.href}
                   onClick={closeMobileMenu}
-                  className="block text-sm font-semibold uppercase tracking-wider text-[#1B1B1B] hover:text-[#617248]"
+                  className="block font-ui text-xs font-medium uppercase tracking-[0.14em] text-[#1B1B1B] hover:text-[#9B773C]"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-5 border-t border-[#C99A4A]/25 pt-4">
+          <div className="mt-5 border-t border-[#CCBFA4]/50 pt-4">
             <a
               href={HUERTANA_BRAND.storeUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}
-              className="flex w-full items-center justify-center rounded-full bg-[#C99A4A] py-2.5 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] hover:bg-[#b8893b]"
+              className="flex w-full items-center justify-center rounded-full bg-[#C09B5D] py-2.5 font-ui text-xs font-bold uppercase tracking-wider text-[#1B1B1B] hover:bg-[#AD874A]"
             >
               Tienda online oficial →
             </a>

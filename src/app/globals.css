@@ -1,17 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-serif: var(--font-fraunces), Georgia, Cambria, "Times New Roman", serif;
-  --font-sans: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-recoleta), Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: var(--font-roboto), system-ui, -apple-system, sans-serif;
+  --font-ui: var(--font-gotham), var(--font-roboto), system-ui, -apple-system, sans-serif;
+  --font-editorial: var(--font-slate), var(--font-roboto), system-ui, sans-serif;
+
+  --color-huertana-black: #1B1B1B;
+  --color-huertana-gold: #C09B5D;
+  --color-huertana-gold-dark: #9B773C;
+  --color-huertana-sand: #CCBFA4;
+  --color-huertana-cream: #FBF7EB;
+  --color-huertana-surface: #FFFDF8;
+  --color-huertana-muted: #F3ECE0;
 }
 
 @layer base {
   :root {
-    --huertana-cream: #F5F0E6;
-    --huertana-black: #1B1B1B;
-    --huertana-gold: #C99A4A;
-    --huertana-leaf: #617248;
-    --huertana-white: #FFFCF7;
+    /* Código Cromático Oficial — Manual de Marca Huertana */
+    --huertana-black: #1B1B1B;        /* Negro */
+    --huertana-gold: #C09B5D;         /* Pantone 465 (R:192 G:155 B:93) */
+    --huertana-gold-dark: #9B773C;    /* Pantone 465 acento de contraste */
+    --huertana-sand: #CCBFA4;         /* Pantone 7501 (R:204 G:191 B:164) */
+    --huertana-cream: #FBF7EB;        /* Pantone 2935 / 9060 (R:251 G:247 B:235) */
+    --huertana-surface: #FFFDF8;      /* Superficie limpia cálida */
+    --huertana-muted: #F3ECE0;        /* Superficie arena suave */
   }
 
   html {
@@ -28,4 +41,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

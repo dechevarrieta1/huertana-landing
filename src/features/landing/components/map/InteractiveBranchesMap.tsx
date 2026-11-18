@@ -42,7 +42,6 @@ export function InteractiveBranchesMap({
   const handleSelectProvince = (provId: string | null) => {
     setSelectedProvinceId(provId);
     if (provId) {
-      // Si la provincia cambia, seleccionar el primer punto de esa provincia
       const firstInProv = branches.find((b) => b.provinceId === provId);
       if (firstInProv) {
         setSelectedBranchId(firstInProv.id);
@@ -51,7 +50,11 @@ export function InteractiveBranchesMap({
   };
 
   return (
-    <div className={`relative ${className}`} role="region" aria-label="Mapa interactivo de sucursales Huertana">
+    <div
+      className={`relative ${className}`}
+      role="region"
+      aria-label="Mapa interactivo de sucursales Huertana"
+    >
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10 items-start">
         {/* Columna Izquierda: Mapa Ilustrado de Argentina como protagonista */}
         <div className="lg:col-span-7 flex flex-col items-center">
@@ -64,13 +67,13 @@ export function InteractiveBranchesMap({
             onSelectBranch={handleSelectBranch}
             onHoverBranch={setHoveredBranch}
           />
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[11px] text-[#1B1B1B]/75 font-mono">
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[11px] text-[#1B1B1B]/75 font-ui">
             <span className="flex items-center gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#BA8840] border border-white" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#C09B5D] border border-[#1B1B1B]/20" />
               Provincias con Huertana
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#DCCBA3] border border-white" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#CCBFA4] border border-[#1B1B1B]/20" />
               Envíos a todo el país
             </span>
           </div>
@@ -78,24 +81,23 @@ export function InteractiveBranchesMap({
 
         {/* Columna Derecha: Tarjeta de información interactiva y listado complementario */}
         <div className="lg:col-span-5 flex flex-col space-y-5">
-          {/* Tarjeta de información dinámica del punto seleccionado */}
           <BranchInfoCard
             branch={selectedBranch}
             onClose={handleCloseCard}
           />
 
           {/* Directorio completo con buscador y filtros */}
-          <div className="rounded-2xl border border-[#C99A4A]/25 bg-[#F5F0E6] p-4 sm:p-5 shadow-xs">
+          <div className="rounded-2xl border border-[#CCBFA4] bg-[#FBF7EB] p-4 sm:p-5 shadow-xs">
             <div className="mb-3 flex items-center justify-between">
               <div>
                 <h4 className="font-serif text-sm font-semibold text-[#1B1B1B] uppercase tracking-wider">
                   Puntos de Venta & Sucursales
                 </h4>
-                <p className="text-[11px] text-[#1B1B1B]/60">
+                <p className="text-[11px] text-[#1B1B1B]/65">
                   Encontrá el más cercano a tu domicilio
                 </p>
               </div>
-              <span className="rounded-full bg-[#FFFCF7] border border-[#C99A4A]/30 px-2.5 py-1 font-mono text-[11px] text-[#617248] font-bold">
+              <span className="rounded-full bg-[#FFFDF8] border border-[#CCBFA4] px-2.5 py-1 font-ui text-[10px] text-[#9B773C] font-bold">
                 {branches.length} locales
               </span>
             </div>

@@ -40,12 +40,106 @@ export interface GoogleReviewItem {
   text: string;
 }
 
+export interface BrandPrinciple {
+  num: string;
+  title: string;
+  detail: string;
+}
+
+export interface TourismReason {
+  id: string;
+  title: string;
+  description: string;
+  icon: "leaf" | "award" | "star" | "users";
+}
+
+export interface TourismStep {
+  number: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  imagePosition?: string;
+}
+
+export interface TourismItineraryField {
+  label: string;
+  value: string;
+}
+
+export interface TourismConfig {
+  eyebrow: string;
+  title: string;
+  tagline: string;
+  intro: string;
+  experienceTitle: string;
+  reasons: TourismReason[];
+  steps: TourismStep[];
+  essenceTitle: string;
+  essenceSubtitle: string;
+  essenceDescription: string;
+  essenceBadges: string[];
+  itinerary: TourismItineraryField[];
+  tariff: {
+    label: string;
+    price: string;
+    taxNote: string;
+    unit: string;
+    conditions: string[];
+  };
+  contact: {
+    email: string;
+    phoneDisplay: string;
+    whatsappUrl: string;
+    address: string;
+    instagramHandle: string;
+    instagramUrl: string;
+  };
+}
+
+export type BrochureIconKind =
+  | "plant-based"
+  | "no-preservatives"
+  | "gluten-free"
+  | "artisan-craft"
+  | "aove"
+  | "mendoza-fruit"
+  | "star-quality"
+  | "gift-share";
+
+export interface CategoryPropertyBadge {
+  icon: BrochureIconKind;
+  label: string;
+  detail: string;
+}
+
+export interface ProductItem {
+  slug: string;
+  categoryId: "dulces" | "salados" | "seleccion-tomate" | "gif-card";
+  name: string;
+  botanicalName?: string;
+  origin?: string;
+  weightLabel: string;
+  summary: string;
+  processNote?: string;
+  ingredients?: string;
+  pairings: string[];
+  properties: string[];
+  nutritionNote?: string;
+  conservation: string;
+  storeUrl: string;
+}
+
 export interface BrandConfig {
   name: string;
+  originSubtitle: string;
   claim: string;
+  familyTagline: string;
   moments: MomentOption[];
   location: string;
   addressShort: string;
+  streetAddress: string;
+  gps: string;
   schedule: string;
   storeUrl: string;
   allProductsUrl: string;

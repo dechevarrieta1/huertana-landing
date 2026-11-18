@@ -17,7 +17,7 @@ const envSchema = z.object({
     .string()
     .url()
     .default(
-      "https://www.google.com/maps/search/?api=1&query=Russell,+Maipu,+Mendoza,+Argentina"
+      "https://www.google.com/maps/search/?api=1&query=Pedro+Vargas+1765,+Russell,+Maipu,+Mendoza,+Argentina"
     ),
 });
 

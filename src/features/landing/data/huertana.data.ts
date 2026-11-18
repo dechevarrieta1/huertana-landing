@@ -1,10 +1,12 @@
 import { env } from "@/lib/env";
 import type {
   BrandConfig,
+  BrandPrinciple,
   CategoryItem,
   GoogleReviewItem,
   MomentOption,
   NavItem,
+  TourismConfig,
 } from "../types/huertana.types";
 
 export const HUERTANA_MOMENTS: MomentOption[] = [
@@ -78,11 +80,15 @@ export const HUERTANA_MOMENTS: MomentOption[] = [
 
 export const HUERTANA_BRAND: BrandConfig = {
   name: "HUERTANA",
-  claim: "Nutrir el cuerpo, cuidar la tierra",
+  originSubtitle: "MENDOZA · ARGENTINA",
+  claim: "De la huerta a la mesa",
+  familyTagline: "Como lo hacían nuestras abuelas",
   moments: HUERTANA_MOMENTS,
-  location: "Russell, Maipú, Mendoza, Argentina",
+  location: "Pedro Vargas 1765, Russell, Maipú, Mendoza, Argentina",
   addressShort: "Russell, Maipú · Mendoza",
-  schedule: "Lunes a Viernes de 9:00 a 18:00 hs",
+  streetAddress: "Pedro Vargas 1765, Russell, Maipú",
+  gps: "S 33° 1' 15,83'' · W 68° 44' 19,56''",
+  schedule: "Lunes a viernes de 9:00 a 17:00 hs",
   storeUrl: env.NEXT_PUBLIC_STORE_URL,
   allProductsUrl: `${env.NEXT_PUBLIC_STORE_URL.replace(/\/+$/, "")}/productos/`,
   instagramUrl: env.NEXT_PUBLIC_INSTAGRAM_URL,
@@ -95,14 +101,41 @@ export const HUERTANA_BRAND: BrandConfig = {
 };
 
 export const HUERTANA_NAV_ITEMS: NavItem[] = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Categorías", href: "#categorias" },
-  { label: "Sobre Huertana", href: "#sobre-huertana" },
-  { label: "Reseñas", href: "#resenas" },
-  { label: "Ubicación", href: "#ubicacion" },
+  { label: "Nosotros", href: "/#inicio" },
+  { label: "Nuestros productos", href: "/#productos" },
+  { label: "Turismo", href: "/#turismo" },
+  { label: "Reseñas", href: "/#resenas" },
+  { label: "Ubicación", href: "/#ubicacion" },
 ];
 
-export const HUERTANA_CATEGORIES: CategoryItem[] = [
+export const HUERTANA_PRINCIPLES: BrandPrinciple[] = [
+  {
+    num: "01",
+    title: "Aceite de oliva virgen extra",
+    detail:
+      "AOVE de primera presión en frío e ingredientes nobles como base de cada conserva.",
+  },
+  {
+    num: "02",
+    title: "Recetas limpias",
+    detail:
+      "Hasta 45 variedades —mermeladas con 65% de fruta— sin conservantes ni colorantes químicos.",
+  },
+  {
+    num: "03",
+    title: "Libre de gluten (Sin TACC)",
+    detail:
+      "Elaboración segura y 100% vegetal para disfrutar y compartir en cada mesa.",
+  },
+  {
+    num: "04",
+    title: "Elaboración a la vista",
+    detail:
+      "Taller artesanal abierto en Pedro Vargas 1765, en el corazón de los caminos del vino.",
+  },
+];
+
+export const HUERTANA_PRODUCT_LINES: CategoryItem[] = [
   {
     id: "dulces",
     title: "Mermeladas gourmet",
@@ -146,7 +179,7 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
     description:
       "Salsas caseras listas para servir, elaboradas con tomates mendocinos madurados en planta. El sabor entrañable de los almuerzos de domingo.",
     badge: "Tomate Mendocino · Receta Casera",
-    highlights: ["Sala Tuco", "Salsa Picante", "Ketchup Natural", "Salsa Barbacoa"],
+    highlights: ["Salsa Tuco", "Salsa Picante", "Ketchup Natural", "Salsa Barbacoa"],
     placeholderLabel: "FOTO: Salsas de Tomate & Tuco",
     imageSrc: "/images/category-tomate.webp",
     imageAlt:
@@ -173,6 +206,112 @@ export const HUERTANA_CATEGORIES: CategoryItem[] = [
   },
 ];
 
+// Alias de compatibilidad
+export const HUERTANA_CATEGORIES = HUERTANA_PRODUCT_LINES;
+
+export const HUERTANA_TOURISM: TourismConfig = {
+  eyebrow: "Turismo & Visitas Guiadas",
+  title: "Una experiencia diferente en el corazón de Maipú",
+  tagline: "Una parada gourmet en los caminos del vino",
+  intro:
+    "Sumá a tu recorrido una propuesta genuina, artesanal y multisensorial. Conocé nuestra historia, descubrí cómo elaboramos y degustá los sabores de Mendoza.",
+  experienceTitle: "La experiencia: Visita guiada + degustación",
+  reasons: [
+    {
+      id: "diferencial",
+      title: "Experiencia diferencial",
+      description: "Una propuesta distinta dentro de los caminos del vino.",
+      icon: "leaf",
+    },
+    {
+      id: "identidad",
+      title: "Identidad Mendocina",
+      description: "17 años transformando frutas y verduras en sabores genuinos.",
+      icon: "award",
+    },
+    {
+      id: "valor",
+      title: "Alto valor percibido",
+      description: "Recorrido, elaboración a la vista y degustación en una misma visita.",
+      icon: "star",
+    },
+    {
+      id: "complemento",
+      title: "Complemento ideal",
+      description: "Perfecta para completar una jornada de actividades en Maipú.",
+      icon: "users",
+    },
+  ],
+  steps: [
+    {
+      number: "01",
+      title: "Nuestra historia",
+      description:
+        "Conocé cómo nació Huertana como proyecto familiar y el camino recorrido durante 17 años.",
+      imageSrc: "/images/turismo-historia.webp",
+      imageAlt:
+        "Fachada de la planta artesanal Huertana en Russell, Maipú, con el isologo oficial en relieve",
+      imagePosition: "object-[50%_42%]",
+    },
+    {
+      number: "02",
+      title: "Producción a la vista",
+      description:
+        "Visitá la sala de elaboración con explicación de los procesos que se estén realizando ese día.",
+      imageSrc: "/images/turismo-produccion.webp",
+      imageAlt:
+        "Manos preparando alcauciles frescos en la sala de elaboración artesanal de Huertana",
+      imagePosition: "object-[50%_40%]",
+    },
+    {
+      number: "03",
+      title: "Degustación",
+      description:
+        "Cierre con una degustación de entre 12 y 15 productos seleccionados, dentro de una línea que alcanza hasta 45 variedades.",
+      imageSrc: "/images/turismo-degustacion.webp",
+      imageAlt:
+        "Degustación de pasta de aceituna negra y pasta de aceituna verde Huertana con pan artesanal",
+      imagePosition: "object-[50%_55%]",
+    },
+  ],
+  essenceTitle: "Nuestra esencia",
+  essenceSubtitle: "De la huerta a la mesa",
+  essenceDescription:
+    "Productos delicatessen y mermeladas elaboradas a partir de recetas familiares, ingredientes nobles y procesos cuidados.",
+  essenceBadges: [
+    "Sin conservantes · Sin colorantes",
+    "Libre de gluten",
+    "Elaboración a la vista",
+  ],
+  itinerary: [
+    { label: "Duración", value: "45 minutos a 1 hora" },
+    { label: "Horarios", value: "De 10 a 16 h con reserva previa" },
+    { label: "Idiomas", value: "Castellano" },
+    { label: "Capacidad", value: "Grupos reducidos de hasta 20 personas" },
+  ],
+  tariff: {
+    label: "Tarifas para Agencias",
+    price: "$10.000",
+    taxNote: "+IVA",
+    unit: "por persona",
+    conditions: [
+      "Menores de 12 años, sin costo.",
+      "Tarifa sujeta a modificaciones según temporada y disponibilidad.",
+      "Valores vigentes hasta diciembre de 2026 inclusive.",
+    ],
+  },
+  contact: {
+    email: "turismohuertana@gmail.com",
+    phoneDisplay: "261-700-0772",
+    whatsappUrl: `https://wa.me/5492617000772?text=${encodeURIComponent(
+      "Hola Huertana! Quisiera consultar y reservar una visita guiada con degustación en Russell, Maipú."
+    )}`,
+    address: "Pedro Vargas 1765, Russell, Maipú",
+    instagramHandle: "@huertana.ok",
+    instagramUrl: "https://www.instagram.com/huertana.ok/",
+  },
+};
+
 export const HUERTANA_GOOGLE_REVIEWS: GoogleReviewItem[] = [
   {
     id: "rev-1",
@@ -195,7 +334,7 @@ export const HUERTANA_GOOGLE_REVIEWS: GoogleReviewItem[] = [
     author: "Cecilia Rossi",
     relativeTime: "Hace 1 mes",
     rating: 5,
-    productMentioned: "Sala Tuco Casera",
+    productMentioned: "Salsa Tuco Casera",
     text: "La mejor salsa de tomate lista para los domingos en familia: sin acidez excesiva, sin conservantes y con gusto a comida de hogar.",
   },
   {

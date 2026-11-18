@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Placeholder } from "@/components/ui/Placeholder";
 import type { CategoryItem } from "../types/huertana.types";
 
@@ -7,12 +8,14 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ category }: CategoryCardProps) {
+  const detailHref = `/productos/${category.id}`;
+
   return (
-    <article className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-[#C99A4A]/30 bg-[#FFFCF7] p-5 shadow-xs transition-all duration-200 hover:border-[#C99A4A] sm:p-7">
+    <article className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-[#CCBFA4] bg-[#FFFDF8] p-5 shadow-xs transition-all duration-200 hover:border-[#C09B5D] sm:p-6">
       <div>
         {category.imageSrc ? (
-          <div className="mb-4 sm:mb-5">
-            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#C99A4A]/30 bg-[#EFECE6]">
+          <Link href={detailHref} className="block mb-4">
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#CCBFA4]/60 bg-[#F3ECE0]">
               <Image
                 src={category.imageSrc}
                 alt={category.imageAlt ?? category.title}
@@ -23,56 +26,34 @@ export function CategoryCard({ category }: CategoryCardProps) {
                 }`}
               />
             </div>
-          </div>
+          </Link>
         ) : (
-          /* Placeholder visible en tablet/desktop, oculto en mobile para evitar scroll excesivo */
-          <div className="hidden sm:block mb-5">
+          <div className="hidden sm:block mb-4">
             <Placeholder
               label={category.placeholderLabel}
               ratio="aspect-[16/10]"
-              hint="Reemplazable con foto oficial de la categoría"
+              hint="Reemplazable con foto oficial del producto"
             />
           </div>
         )}
 
-        <div>
-          <span className="font-mono text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#617248]">
-            [ {category.badge} ]
-          </span>
-
-          <h3 className="mt-1 font-serif text-xl sm:text-2xl font-normal text-[#1B1B1B]">
+        <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#1B1B1B]">
+          <Link
+            href={detailHref}
+            className="hover:text-[#9B773C] transition-colors focus-visible:outline-2 focus-visible:outline-[#C09B5D]"
+          >
             {category.title}
-          </h3>
-
-          <p className="text-xs font-medium text-[#1B1B1B]/60">
-            {category.subtitle}
-          </p>
-
-          <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#1B1B1B]/80 hidden sm:block">
-            {category.description}
-          </p>
-
-          <div className="mt-3 rounded-lg border border-[#C99A4A]/20 bg-[#F5F0E6]/70 p-2.5 sm:p-3">
-            <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#617248]">
-              Variedades:
-            </span>
-            <p className="mt-0.5 text-xs text-[#1B1B1B]/85 font-medium leading-snug">
-              {category.highlights.join(" · ")}
-            </p>
-          </div>
-        </div>
+          </Link>
+        </h3>
       </div>
 
-      <div className="mt-4 sm:mt-6 border-t border-[#C99A4A]/20 pt-3 sm:pt-4">
-        <a
-          href={category.storeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Ver ${category.title} en Tiendanube (abre en nueva pestaña)`}
-          className="inline-flex w-full items-center justify-center rounded-full bg-[#F5F0E6] py-2.5 sm:py-3 text-xs font-semibold uppercase tracking-wider text-[#1B1B1B] transition-colors group-hover:bg-[#C99A4A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
+      <div className="mt-4 pt-3 border-t border-[#CCBFA4]/45">
+        <Link
+          href={detailHref}
+          className="inline-flex w-full items-center justify-center rounded-full bg-[#C09B5D] py-2.5 px-5 font-ui text-xs font-bold uppercase tracking-[0.1em] text-[#1B1B1B] shadow-xs transition-colors hover:bg-[#AD874A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B1B1B]"
         >
-          Ver en Tiendanube →
-        </a>
+          Ver Propiedades →
+        </Link>
       </div>
     </article>
   );
